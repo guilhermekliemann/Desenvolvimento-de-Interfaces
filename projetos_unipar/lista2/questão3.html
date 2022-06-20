@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+    <style>
+        h1 {
+            font-family: cursive;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .containeer {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function financiamento(){
+            var valor_compra = document.getElementById("valorMoto").value;
+            var valor_entrada = document.getElementById("valorEntrada").value;
+            var valor_juros = document.getElementById("taxaJuros").value;
+            var prazo_final = document.getElementById("prazoFin").value;
+
+            var valor_sd = valor_compra - valor_entrada;            
+            var decimal = valor_juros / 100;            
+            var juros = 1 + decimal;         
+            var valor_parcela = valor_sd * juros;
+            var valor_parc = valor_parcela / prazo_final;
+            
+            document.getElementById("resultado1").textContent = "Valor da Moto: " + valor_compra;
+            document.getElementById("resultado2").textContent = "Valor da Entrada: " + valor_entrada;
+            document.getElementById("resultado3").textContent = "Valor das Parcelas: " + valor_parc;
+        }
+    </script>
+</head>
+<body>
+    <h1>Simulador de Financiamento de Motos</h1>
+    
+    <div class="containeer">
+        <label for="valorMoto">Valor da Moto:</label><br>
+        <input type="text" id="valorMoto"><br><br>
+        
+        <label for="valorEntrada">Valor da Entrada:</label><br>
+        <input type="text" id="valorEntrada"><br><br>
+
+        <label for="taxaJuros">Taxa de Juros:</label><br>
+        <input type="number" step="0.001" id="taxaJuros"><br><br>
+
+        <label for="prazoFin">Prazo do Financiamento:</label><br>
+        <input type="text" id="prazoFin"><br><br>
+
+        <input type="button" value="Calcular Financiamento" onclick="financiamento()"><br>
+      
+        <p id="resultado1"></p>
+        <p id="resultado2"></p>
+        <p id="resultado3"></p>
+    </div>
+</body>
+</html>

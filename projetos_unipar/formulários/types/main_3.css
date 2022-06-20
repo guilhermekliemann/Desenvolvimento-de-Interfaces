@@ -1,0 +1,42 @@
+body {
+    background-image: url("img/bg6.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+    }
+
+h1 {
+    text-align: center;
+    color: rgb(240, 240, 240);
+    font-family: fantasy;
+}
+
+.content {
+    background-color: rgb(240, 240, 240);
+    width: 700px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 45px;
+    border: 2px solid black;
+}
+
+form {
+    justify-content: center;
+    width: 700px;
+    height: 800px;
+}
+
+.btn {
+    display: flex;
+    margin: auto;
+    margin-bottom: 7px;
+}
+
+.form-label {
+    font-family: fantasy;
+    font-size: 20px;
+}
+
+

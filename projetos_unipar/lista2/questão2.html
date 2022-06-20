@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+    <style>
+        h1 {
+            font-family: cursive;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .containeer {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function desconto1() {
+            var valor = document.getElementById("valor").value;
+
+            var promocao = (parseFloat(valor) * 10) / 100;
+            var resultado = parseFloat(valor) - promocao;
+            
+            document.getElementById("resultado").innerHTML += "Promoção de 1 Item por " + resultado + " reais!" + "<br><br>";
+        }
+
+        function desconto2() {
+            var valor = document.getElementById("valor").value;
+
+            var promocao = (parseFloat(valor) * 15) / 100;
+            var resultado = parseFloat(valor) - promocao;
+            
+            document.getElementById("resultado").innerHTML += "Promoção de 2 Itens por " + resultado + " reais!" + "<br><br>";
+        }
+
+        function desconto3() {
+            var valor = document.getElementById("valor").value;
+
+            var promocao = (parseFloat(valor) * 25) / 100;
+            var resultado = parseFloat(valor) - promocao;
+            
+            document.getElementById("resultado").innerHTML += "Promoção de 3 Itens por " + resultado + " reais!" + "<br><br>";
+        }
+
+        function desconto4() {
+            var valor = document.getElementById("valor").value;
+
+            var promocao = (parseFloat(valor) * 35) / 100;
+            var resultado = parseFloat(valor) - promocao;
+            
+            document.getElementById("resultado").innerHTML += "Promoção de 4 Itens por " + resultado + " reais!" + "<br><br>";
+        }
+
+        function desconto5() {
+            var valor = document.getElementById("valor").value;
+
+            var promocao = (parseFloat(valor) * 45) / 100;
+            var resultado = parseFloat(valor) - promocao;
+            
+            document.getElementById("resultado").innerHTML += "Promoção de 5 Itens por " + resultado + " reais!" + "<br><br>";
+        }
+
+        function desconto6() {
+            var valor = document.getElementById("valor").value;
+
+            var promocao = (parseFloat(valor) * 60) / 100;
+            var resultado = parseFloat(valor) - promocao;
+            
+            document.getElementById("resultado").innerHTML += "Promoção de 6 Itens ou mais por " + resultado + " reais!" + "<br><br>";
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Descontos Black Friday</h1>
+
+    <div class="containeer">
+        <label for="nome">Nome do Produto:</label><br>
+        <input type="text" id="nome"><br><br>
+        <label for="valor">Valor da Etiqueta:</label><br>
+        <input type="text" id="valor"><br><br>
+
+        <input type="button" value="1 ITEM COM 10% DE DESCONTO" onclick="desconto1()"><br><br>
+        <input type="button" value="2 ITEM COM 15% DE DESCONTO" onclick="desconto2()"><br><br>
+        <input type="button" value="3 ITEM COM 25% DE DESCONTO" onclick="desconto3()"><br><br>
+        <input type="button" value="4 ITEM COM 35% DE DESCONTO" onclick="desconto4()"><br><br>
+        <input type="button" value="5 ITEM COM 45% DE DESCONTO" onclick="desconto5()"><br><br>
+        <input type="button" value="6 ITEM COM 60% DE DESCONTO" onclick="desconto6()"><br><br>
+
+        <p id="resultado"></p>
+    </div>
+</body>
+</html>
