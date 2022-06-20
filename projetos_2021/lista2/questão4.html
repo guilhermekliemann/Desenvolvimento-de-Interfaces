@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Exercicio 4</title>
+    <style>
+        .mb-3 {
+            width: 500px;
+            margin: auto;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .btn {
+            width: 500px;
+            display: flex;
+            margin: auto;
+        }
+
+        input {
+            margin: auto;
+        }
+
+        .form-label {
+            font-family: cursive;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        textarea {
+            width: 600px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"><b>Texto</b></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+    <div class="btn">
+        <input id="button1" type="button" value="Azul">
+        <input id="button2" type="button" value="Vermelho">
+        <input id="button3" type="button" value="Verde">
+        <input id="button4" type="button" value="Aumentar Fonte">
+        <input id="button5" type="button" value="Diminuir Fonte">
+    </div>
+    
+    <script>
+        const text1 = document.getElementsByTagName('textarea')[0];
+        const button1 = document.getElementById('button1');
+        button1.addEventListener('click', function() {
+            text1.style.color = 'blue';
+        });
+
+        const text2 = document.getElementsByTagName('textarea')[0];
+        const button2 = document.getElementById('button2');
+        button2.addEventListener('click', function() {
+            text2.style.color = 'red';
+        });
+
+        const text3 = document.getElementsByTagName('textarea')[0];
+        const button3 = document.getElementById('button3');
+        button3.addEventListener('click', function() {
+            text3.style.color = 'green';
+        });
+
+        window.onload = function()
+        {
+            var elementBody = document.querySelector('textarea');
+            var button4 = document.getElementById('button4');
+            var button5 = document.getElementById('button5');
+
+            var fontSize = 100;
+            var increaseDecrease = 10;
+
+            button4.addEventListener('click', function(event) {
+                fontSize = fontSize + increaseDecrease;
+                elementBody.style.fontSize = fontSize + '%';
+            });
+
+            button5.addEventListener('click', function(event) {
+                fontSize = fontSize - increaseDecrease;
+                elementBody.style.fontSize = fontSize + '%';
+            });
+        }
+    </script>
+</body>
+</html>
